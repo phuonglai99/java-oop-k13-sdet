@@ -4,29 +4,32 @@ import java.util.Scanner;
 
 public class CalculateBMI {
     public static void main(String[] args) {
-        float weight, height;
         Scanner sc = new Scanner(System.in);
-        System.out.println("please enter your weight(kg): ");
-        weight = sc.nextFloat();
-        System.out.println("please enter your height(m): ");
-        height = sc.nextFloat();
+        System.out.println("Please enter your weight(kg): ");
+        float weight = sc.nextFloat();
+        System.out.println("Please enter your height(m): ");
+        float height = sc.nextFloat();
         sc.close();
-        float BMI = weight / height / height;
-        if (BMI < 18.5) {
-            //calculate amount of weight need to increase which compared to current weight
-            float increaseWeight =  (18.5f * height * height) - weight;
-            System.out.printf("Underweight \nTry to increase your weight by %.1f kg to reach normal weight", increaseWeight);
-        } else if (BMI >= 18.5 && BMI <= 24.9) {
-            System.out.println("Normal weight \nKeep your weight");
-        } else if (BMI >= 25 && BMI <= 29.9) {
-            //calculate amount of weight need to decrease which compared to current weight
-            float decreaseWeight = weight -  (24.9f * height * height);
-            System.out.printf("Overweight \nTry to decrease your weight by %.1f kg to reach normal weight", decreaseWeight);
+        if (height == 0) {
+            System.out.println("Wrong input height, it must be other than 0!");
         } else {
-            //calculate amount of weight need to decrease which compared to current weight
-            float decreaseWeight = weight - (24.9f * height * height);
-            System.out.printf("Obesity \nTry to decrease your weight by %.1f kg to reach normal weight", decreaseWeight);
+            float BMI = weight / height / height;
+            System.out.printf("Your BMI is: %.1f\n", BMI);
+            if (BMI < 18.5) {
+                //calculate amount of weight need to increase which compared to current weight
+                float increaseWeight = (18.5f * height * height) - weight;
+                System.out.printf("Underweight \nTry to increase your weight by %.1f kg to reach normal weight", increaseWeight);
+            } else if (BMI >= 18.5 && BMI <= 24.9) {
+                System.out.println("Normal weight \nKeep your weight");
+            } else if (BMI >= 25 && BMI <= 29.9) {
+                //calculate amount of weight need to decrease which compared to current weight
+                float decreaseWeight = weight - (24.9f * height * height);
+                System.out.printf("Overweight \nTry to decrease your weight by %.1f kg to reach normal weight", decreaseWeight);
+            } else {
+                //calculate amount of weight need to decrease which compared to current weight
+                float decreaseWeight = weight - (24.9f * height * height);
+                System.out.printf("Obesity \nTry to decrease your weight by %.1f kg to reach normal weight", decreaseWeight);
+            }
         }
     }
-
 }
