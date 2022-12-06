@@ -14,9 +14,7 @@ public class CalculateBMI {
         if (height == 0) {
             System.out.println("Wrong input height, it must be other than 0!");
         } else {
-            //DecimalFormat df = new DecimalFormat("###.#");
             float BMI = weight / height / height;
-            //BMI = df.format(BMI);
             System.out.printf("Your BMI is: %f\n", BMI);
             if (BMI < 18.5) {
                 //calculate amount of weight need to increase which compared to current weight
