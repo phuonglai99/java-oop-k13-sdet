@@ -11,8 +11,8 @@ public class CalculateBMI {
         System.out.println("Please enter your height(m): ");
         float height = sc.nextFloat();
         sc.close();
-        if (height == 0) {
-            System.out.println("Wrong input height, it must be other than 0!");
+        if (height <= 0 || weight<=0) {
+            System.out.println("Wrong input, it must be positive number bigger than 0!");
         } else {
             float BMI = weight / height / 2;
             System.out.printf("Your BMI is: %f\n", BMI);
