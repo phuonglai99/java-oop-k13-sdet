@@ -1,7 +1,7 @@
 package lab_lesson_3;
 
 public class lab_3_4 {
-    //merge two ordered arrays
+    //merge two ordered arrays//
     public static void main(String[] args) {
         int[] arr1 = {1, 2, 3, 4, 5, 6};
         boolean[] flag1 = new boolean[arr1.length];

@@ -1,7 +1,7 @@
 package lab_lesson_3;
 
 public class lab_3_2 {
-    //finding min max of array
+    //finding min max of array//
     public static void main(String[] args) {
         int[] arr = {1,1,10,11};
         int max = arr[0], min = arr[0];

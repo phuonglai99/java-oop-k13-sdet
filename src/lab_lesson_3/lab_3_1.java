@@ -1,7 +1,7 @@
 package lab_lesson_3;
 
 public class lab_3_1 {
-    //print amount of even numbers and amount of odd numbers in array
+    //print amount of even numbers and amount of odd numbers in array//
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5};
         int countEven = 0;
