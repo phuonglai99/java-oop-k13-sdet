@@ -7,34 +7,34 @@ public class lab_3_4 {
         boolean[] flag1 = new boolean[arr1.length];
         int[] arr2 = {1, 2, 3, 4, 5};
         boolean[] flag2 = new boolean[arr2.length];
-        int[] arr3 = new int[arr1.length + arr2.length];
-        int indexArr1 = 0, indexArr2 = 0, indexArr3 = 0;
+        int[] mergeArray = new int[arr1.length + arr2.length];
+        int indexArr1 = 0, indexArr2 = 0, indexMergeArray = 0;
 
         while (indexArr1 < arr1.length && indexArr2 < arr2.length) {
             if (arr1[indexArr1] <= arr2[indexArr2]) {
-                arr3[indexArr3] = arr1[indexArr1];
+                mergeArray[indexMergeArray] = arr1[indexArr1];
                 flag1[indexArr1] = true;
                 indexArr1++;
             } else {
-                arr3[indexArr3] = arr2[indexArr2];
+                mergeArray[indexMergeArray] = arr2[indexArr2];
                 flag2[indexArr2] = true;
                 indexArr2++;
             }
-            indexArr3++;
+            indexMergeArray++;
         }
         if (flag2[arr2.length - 1] != true) {
             for (int i = indexArr2; i < arr2.length; i++) {
-                arr3[indexArr3] = arr2[i];
-                indexArr3++;
+                mergeArray[indexMergeArray] = arr2[i];
+                indexMergeArray++;
             }
         } else {
             for (int i = indexArr1; i < arr1.length; i++) {
-                arr3[indexArr3] = arr1[i];
-                indexArr3++;
+                mergeArray[indexMergeArray] = arr1[i];
+                indexMergeArray++;
             }
         }
 
-        for (int i : arr3) {
+        for (int i : mergeArray) {
             System.out.println(i);
         }
     }
