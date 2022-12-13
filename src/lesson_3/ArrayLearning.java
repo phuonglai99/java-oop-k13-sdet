@@ -1,6 +1,7 @@
 package lesson_3;
 
 public class ArrayLearning {
+    //
     public static void main(String[] args) {
         final int length = 5;
         int[] arr = new int[length];
@@ -14,6 +15,6 @@ public class ArrayLearning {
             System.out.println(arr[i]);
             //arr[i] = i;
         }
-        
+
     }
 }

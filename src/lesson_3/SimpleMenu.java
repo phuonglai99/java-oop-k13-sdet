@@ -4,6 +4,7 @@ import java.security.SecureRandom;
 import java.util.Scanner;
 
 public class SimpleMenu {
+    //
     public static void main(String[] args) {
         /**
          * ======GAME MENU======
