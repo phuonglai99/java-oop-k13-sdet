@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class CalculateBMI {
     public static void main(String[] args) {
+        //comment
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter your weight(kg): ");
         float weight = sc.nextFloat();
